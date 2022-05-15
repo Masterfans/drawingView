@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DrawingView">
+        <!--线宽-->
+        <attr name="lineWidth" format="dimension" />
+        <!--线条颜色-->
+        <attr name="lineColor" format="color" />
+        <!--识别最小移动距离 画笔越小越灵敏, 画出的图案越接近实际轨迹-->
+        <attr name="minLength" format="integer" />
+    </declare-styleable>
+</resources>
