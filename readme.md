@@ -9,6 +9,7 @@
 - undo 撤销
 - redo 重做
 - clean 清空
+- isEmpty 是否为空
 
 ### 支持类
 
@@ -17,6 +18,7 @@ public interface DrawAction {
     boolean redo();    
     boolean undo();    
     void clean();
+    boolean isEmpty();
 }
 public class DrawingView extends View implements DrawAction, DrawActionLiveData {
     //...
@@ -71,5 +73,11 @@ public interface DrawActionLiveData {
      */
     void observerRedo(LifecycleOwner owner, Observer<Integer> count);
 }
+```
+
+### gradle依赖
+
+```groovy
+implementation 'io.github.masterfans:drawingView:1.0.1@aar'
 ```
 

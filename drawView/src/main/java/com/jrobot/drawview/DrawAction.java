@@ -7,4 +7,6 @@ public interface DrawAction {
     boolean undo();
 
     void clean();
+
+    boolean isEmpty();
 }

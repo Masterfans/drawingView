@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     SeekBar mSeekBar1;
     String savePath;
     CheckBox checkCap;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btn_save);
         btnRead = findViewById(R.id.btn_read);
         checkCap = findViewById(R.id.check_cap);
+        textView = findViewById(R.id.textView);
 
         mSeekBar.setProgress(mDrawingView.getLineWidth());
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDrawStatus(int drawCount, int redoCount) {
                 undoBtn.setEnabled(drawCount != 0);
                 redoBtn.setEnabled(redoCount != 0);
+                textView.setText(mDrawingView.isEmpty() ? "empty" : "NoEmpty");
             }
 
             @Override

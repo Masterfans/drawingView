@@ -259,7 +259,7 @@ public class DrawingView extends View implements DrawAction, DrawActionLiveData 
 
 
     public boolean isEmpty() {
-        return path.isEmpty();
+        return mQueue.isEmpty();
     }
 
     @Override
