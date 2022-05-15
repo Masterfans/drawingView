@@ -1,5 +1,9 @@
 ### DrawingView画图签名View
 
+### 动画演示
+
+![screen_record](image/screen_record.gif)
+
 #### 支持操作
 
 - undo 撤销
